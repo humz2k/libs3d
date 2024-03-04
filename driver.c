@@ -72,10 +72,9 @@ int main(){
     mesh.n_tris = 12;
     mesh.tris = tris;
     for (int i = 0; i < 50; i++){
-        printf(".");
+        printf(".\n");
         s3d_draw_mesh(cam,mesh,v3(frand() * 20.0f - 10.0f,frand() * 20.0f - 10.0f,frand() * 10 + 5),v3one(),v3(frand() * 2 * M_PI,frand() * 2 * M_PI,frand() * 2 * M_PI),SIMG_RED);
     }
-    printf("\n");
 
     //s3d_draw_mesh(cam,mesh,v3zero(),v3one(),v3(0,0,0.2),SIMG_RED);
 
