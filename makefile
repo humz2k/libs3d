@@ -13,7 +13,7 @@ HEADERS := $(shell find $(SOURCE_DIR) -name '*.h')
 main: driver $(LIB_DIR)/libs3d.a
 
 driver: driver.c $(LIB_DIR)/libs3d.a
-	$(CC) -Wall -Wpedantic -Wno-newline-eof -Wno-error=parentheses -O3 -I$(SOURCE_DIR) -I$(INCLUDE_DIR) -I$(LIBSIMG_PATH)/include -o $@ $^ $(LIBSIMG_PATH)/lib/libsimg.a
+	$(CC) -Wall -Wpedantic -Wno-newline-eof -Wno-error=parentheses -O3 -I$(SOURCE_DIR) -I$(INCLUDE_DIR) -I$(LIBSIMG_PATH)/include -lm -o $@ $^ $(LIBSIMG_PATH)/lib/libsimg.a
 
 $(LIB_DIR)/libs3d.a: $(OUTPUTS)
 	ar -cr $@ $^
